@@ -151,7 +151,7 @@ def build_dictionary(headers, text):
 def save_as_csv(dictionary, pdf_file):
     with open('csv/' + pdf_file[:-4] + '.csv', 'w') as f:
         for key in dictionary.keys():
-            f.write("%s,%s\n"%(key,dictionary[key]))
+            f.write("%s~%s\n"%(key,dictionary[key]))
 
 def main():
     start_time = datetime.now()
